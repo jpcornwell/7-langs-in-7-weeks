@@ -1,0 +1,51 @@
+
+Find:
+Access file with and without code block
+  f = File.open('users.txt')
+  data = f.read
+  data = f.readlines
+  f.close
+  data = File.read('users.txt').split
+  File.foreach('users.txt') { |line| puts line }
+
+  I guess the code block makes the code a bit more succinct and eliminates
+  the need for the extra step of extracting the file contents to an
+  intermediate variable. Also emphasizes in code what you want to do with the
+  file contents, and lets the language figure out the IO details.
+
+  After reading pickaxe book:
+  File.open('users.txt') do |aFile|
+    print while aFile.gets
+  end
+
+  The open method when passed a block will automatically open and close the
+  file for you. (Similar to Java's 'try-with-resources' statement.)
+
+Translate hash to array
+  h.to_a
+
+Can you translate arrays to hashes
+  Sure. An array is just a hash with integer keys.
+
+Can you iterate through a hash?
+  Sure. If you can convert a hash to an array, then you must be able to
+  iterate over it. Also, there are each_key, each_value, and each_pair methods
+  available, which can be used for iteration.
+
+Can you use Ruby arrays as stacks? Other common data structures?
+  Yeah. There are push and pop methods. You can use it as a queue with shift
+  method. Use it as a circular list with rotate method.
+
+
+Do:
+Print 16 number array 4 numbers at a time using each and each_slice.
+  a = (1..16).to_a
+  a.each { |x|
+    print "#{x}, "
+    print "\n" if x % 4 == 0
+  }
+  a.each_slice(4) { |x| puts x.join(', ') }
+
+Tree problem
+  This doesn't make any sense. It says to accept a nested structure with hashes
+  and arrays, but there are no square brackets in the example input.

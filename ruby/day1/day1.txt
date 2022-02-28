@@ -1,0 +1,18 @@
+
+Find:
+Ruby API - https://rubyapi.org/
+Programming Ruby: The Pragmatic Programmer's Guide 
+  - http://ruby-doc.com/docs/ProgrammingRuby/
+
+Do:
+Print the string "Hello, world."
+  puts 'Hello, world.'
+For the string "Hello, Ruby" find the index of the world "Ruby".
+  'Hello, Ruby'.index('Ruby')
+Print your name ten times.
+  puts 'Jacob ' * 10
+Print the string "This is sentence number 1" where the number 1 changes from 1 to 10.
+  (1..10).each { |i| puts "This is sentence number #{i}" }
+Bonus problem: Guessing game
+  guess.rb
+
